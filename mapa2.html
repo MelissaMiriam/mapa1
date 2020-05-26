@@ -1,0 +1,58 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>mapa2</title>
+		
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""/>
+        
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+        
+        
+    </head>
+
+    <body>
+        <div id="map" style="height: 500px; position: relative; outline: currentcolor none medium;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 4; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="mapa2_files/6_002.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(119px, 208px, 0px); opacity: 1;"><img alt="" role="presentation" src="mapa2_files/5_003.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(119px, -48px, 0px); opacity: 1;"><img alt="" role="presentation" src="mapa2_files/6_003.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-137px, 208px, 0px); opacity: 1;"><img alt="" role="presentation" src="mapa2_files/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(375px, 208px, 0px); opacity: 1;"><img alt="" role="presentation" src="mapa2_files/7.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(119px, 464px, 0px); opacity: 1;"><img alt="" role="presentation" src="mapa2_files/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-137px, -48px, 0px); opacity: 1;"><img alt="" role="presentation" src="mapa2_files/5_002.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(375px, -48px, 0px); opacity: 1;"><img alt="" role="presentation" src="mapa2_files/7_003.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-137px, 464px, 0px); opacity: 1;"><img alt="" role="presentation" src="mapa2_files/7_002.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(375px, 464px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="mapa2_files/university.html" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -19px; margin-top: -19px; width: 38px; height: 38px; transform: translate3d(401px, 193px, 0px); z-index: 193;" alt="" tabindex="0"><img src="mapa2_files/university.html" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -19px; margin-top: -19px; width: 38px; height: 38px; transform: translate3d(440px, 356px, 0px); z-index: 356;" alt="" tabindex="0"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in leaflet-disabled" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out leaflet-disabled" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | @ <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div></div>
+
+        <script type="text/javascript">
+
+          var map = L.map('map', {
+              center: [38.761113,-9.160908],
+              zoom: 10
+          });
+
+          L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+               attribution: '@ <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+               maxZoom: 14,
+               minZoom: 1
+            }).addTo(map);
+
+          var sportingIcon = L.icon({
+              iconUrl: 'imagens/sporting.png', // url that links to the icon image file
+              iconSize:     [38, 38], // size of the icon image in pixels
+              iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+              popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+          });
+          
+          
+          var benficaIcon = L.icon({
+              iconUrl: 'imagens/benfica.png', // url that links to the icon image file
+              iconSize:     [38, 38], // size of the icon image in pixels
+              iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
+              popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
+          });
+
+
+          var marker1 = L.marker([38.761113,-9.160908], {icon: sportingIcon}).addTo(map);
+          var marker2 = L.marker([38.752729,-9.184739], {icon: benficaIcon}).addTo(map);
+
+          var pic1 = '<img src="imagens/sporting_perde.jpg" alt="BBH" width="250">';
+          var pic2 = '<img src="imagens/benfica_campeao.jpeg" width="250">';
+
+          marker1.bindPopup('<p style="color:green; font-weight:bold"> Sporting </p>' + pic1);
+          marker2.bindPopup('<p style="color:red; font-weight:bold"> Campeão </p>' + pic2);
+
+        </script>
+   
+
+</body></html>
